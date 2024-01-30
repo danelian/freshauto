@@ -41,6 +41,17 @@
   }
 }
 
+@media screen and (max-width: 1560px) {
+  :root {
+    --container-offset: 20px;
+  }
+}
+@include tablet {
+  :root {
+    --container-offset: 15px;
+  }
+}
+
 
 /***** BLOCKS GLOBAL *****/
 @import "general";
