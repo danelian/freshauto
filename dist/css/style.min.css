@@ -1879,3 +1879,49 @@ input[type=number]::-webkit-inner-spin-button {
     margin-bottom: 6px;
   }
 }
+.seo-section {
+  margin-bottom: 64px;
+}
+.seo-section__block {
+  padding: 40px 44px 44px 44px;
+  border-radius: 25px;
+  background-color: #282826;
+}
+.seo-section__block h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.seo-section__block p {
+  margin-top: 16px;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 1024px) {
+  .seo-section {
+    margin-bottom: 48px;
+  }
+  .seo-section__block {
+    padding: 28px 28px 32px 28px;
+    border-radius: 15px;
+  }
+  .seo-section__block h2 {
+    font-size: 24px;
+  }
+  .seo-section__block p {
+    margin-top: 12px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .seo-section__block {
+    padding: 20px;
+  }
+}
