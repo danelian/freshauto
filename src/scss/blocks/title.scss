@@ -8,3 +8,18 @@
 	line-height: 1.4;
 	color: var(--white-color);
 }
+@include desktop {
+	.section-title {
+		font-size: 36px;
+	}
+}
+@include tablet {
+	.section-title {
+		font-size: 32px;
+	}
+}
+@include mobile {
+	.section-title {
+		font-size: 24px;
+	}
+}
