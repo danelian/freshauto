@@ -1,0 +1,121 @@
+.searchloc {
+  margin-bottom: 30px;
+  &__wrapper {
+    display: flex;
+    position: relative;
+    padding: 48px;
+    min-height: 540px;
+    border-radius: 25px;
+    background-color: #292b29;
+    z-index: -1;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 25px;
+      background: radial-gradient(154.61% 65.31% at 77.53% 56.4%, rgba(41, 43, 41, 0.00) 0%, #292B29 100%);
+      z-index: -1;
+    }
+  }
+  &__content {
+    max-width: 500px;
+    position: relative;
+    padding-bottom: 120px;
+    .section-title {
+      font-weight: 500;
+    }
+    p {
+      margin-top: 16px;
+      margin-bottom: 0;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+  }
+  &__icon {
+    position: absolute;
+    bottom: 0;left: 0;
+    width: 100px;
+    height: 100px;
+  }
+  &__image {
+    position: absolute;
+    top: 0;right: 0;bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: right;
+    z-index: -1;
+    &--mobile {
+      display: none;
+    }
+  }
+}
+
+@include tablet {
+  .searchloc {
+    &__wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 24px;
+      min-height: auto;
+      border-radius: 15px;
+      &::after {
+        display: none;
+      }
+    }
+    &__content {
+      max-width: 100%;
+      padding-bottom: 60px;
+      .section-title {
+        margin-bottom: 12px;
+      }
+      p {
+        margin-top: 12px;
+        font-size: 18px;
+      }
+    }
+    &__icon {
+      left: auto;
+      right: 0;
+      width: 40px;
+      height: 40px;
+    }
+    &__image {
+      display: none;
+      &--mobile {
+        margin-top: 16px;
+        display: block;
+        max-width: 100%;
+        width: 330px;
+        height: auto;
+        aspect-ratio: 330 / 194;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .searchloc {
+    &__wrapper {
+      padding: 16px 16px 32px 16px;
+    }
+    &__content {
+      p {
+        font-size: 16px;
+      }
+    }
+    &__image {
+      &--mobile {
+        width: 100%;
+        background-size: cover;
+      }
+    }
+  }
+}
