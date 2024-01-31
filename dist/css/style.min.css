@@ -1020,6 +1020,30 @@ th {
   z-index: 1000;
 }
 
+/*-----footer-----*/
+.footer {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: #0b0b0b;
+}
+.footer__copyright {
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #6f6d66;
+}
+
+@media screen and (max-width: 576px) {
+  .footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .footer__copyright {
+    text-align: center;
+    width: 100%;
+  }
+}
 .swiper {
   max-width: 100%;
   width: 100%;
