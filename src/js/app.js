@@ -25,4 +25,24 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   })
 
+
+  $(".js-select2").select2({
+    dropdownPosition: 'below',
+    closeOnSelect: true,
+    language: {
+      noResults: function () {
+        return "Ничего не найдено";
+      },
+    }
+  });
+  $("#select-marka").select2({
+    placeholder: "Марка"
+  });
+  $("#select-model").select2({
+    placeholder: "Модель"
+  });
+  $('.js-select2').one('select2:open', function(e) {
+    $('input.select2-search__field').prop('placeholder', "Поиск");
+  });
+
 })
