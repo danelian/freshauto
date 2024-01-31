@@ -26,6 +26,15 @@ document.addEventListener('DOMContentLoaded', function(){
   })
 
 
+  // ---------------------- SWIPER ------------------------
+  var swiper = new Swiper(".acardSwiper", {
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+
+
   $(".js-select2").select2({
     dropdownPosition: 'below',
     closeOnSelect: true,

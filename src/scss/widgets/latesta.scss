@@ -1,0 +1,121 @@
+.latesta {
+  margin-bottom: 44px;
+  &__cards {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    .acard {
+      width: calc(33.33% - 14px);
+      margin-right: 21px;
+      margin-bottom: 22px;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.acard {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 22px 28px 22px;
+  color: #11141b;
+  border-radius: 25px;
+  background-color: #f6f6f6;
+  &Swiper {
+    width: 100%;
+    height: auto;
+    max-height: 310px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 4 / 3;
+      border-radius: 5px;
+    }
+    .swiper-pagination {
+      display: flex;
+      top: auto;left: 20px;right: 0;bottom: 20px;
+      width: calc(100% - 40px);
+    }
+    .swiper-pagination-bullet {
+      width: -webkit-fill-available;
+      height: 5px;
+      margin: 0 5px;
+      border-radius: 10px;
+      background-color: var(--white-color);
+      opacity: .7;
+    }
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #11141b;
+  }
+  &__price {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 12px;
+    width: 100%;
+    flex-wrap: wrap;
+    .old {
+      position: relative;
+      margin-right: 7px;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1;
+      color: rgba(17, 20, 27, .3);
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;left: -1.5px;
+        transform: translateY(-50%);
+        width: calc(100% + 3px);
+        height: 1.5px;
+        background-color: rgba(17, 20, 27, .2);
+      }
+    }
+    .new {
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1;
+      color: rgba(17, 20, 27, .7);
+    }
+  }
+  &__chars {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 8px;
+    border-top: 0.75px solid #c8c9cA;
+    p {
+      margin: 4px 12px 4px 0;
+      width: calc(30% - 6px);
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1;
+      color: rgba(17, 20, 27, .3);
+      &:nth-child(2n) {
+        margin-right: 0;
+        width: calc(70% - 6px);
+      }
+    }
+  }
+}

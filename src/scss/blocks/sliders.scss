@@ -10,16 +10,16 @@
 }
 
 /* swiper-bullets styling */
-.swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  margin: 0 6px;
-  background-color: #C8C8C8;
-  opacity: 1;
-}
-.swiper-pagination-bullet-active {
-  transform: scale(1.5);
-}
+// .swiper-pagination-bullet {
+//   width: 10px;
+//   height: 10px;
+//   margin: 0 6px;
+//   background-color: #C8C8C8;
+//   opacity: 1;
+// }
+// .swiper-pagination-bullet-active {
+//   transform: scale(1.5);
+// }
 
 
 .swiper-button-prev,
@@ -68,9 +68,6 @@
     color: var(--font-color);
   }
 }
-.default-wrapper-dark .swiper-bottom .swiper-pagination-fraction {
-  color: var(--lightGrey-color);
-}
 .swiper-nav {
   display: flex;
   align-items: center;
@@ -85,35 +82,5 @@
     width: 40px;
     border-radius: 0;
     background-color: transparent;
-  }
-}
-
-
-@include tablet {
-  .swiper-pagination-bullet {
-    width: 5px;
-    height: 5px;
-    margin: 0 3px;
-  }
-  .swiper-button-prev,
-  .swiper-button-next {
-    &::after {
-      font-size: 30px;
-      width: 30px;
-      height: 30px;
-    }
-  }
-  .swiper-bottom {
-    margin-top: 20px;
-    .swiper-pagination-fraction {
-      font-size: 16px;
-    }
-  }
-  .swiper-nav {
-    gap: 10px;
-    .swiper-button-prev,
-    .swiper-button-next {
-      width: 30px;
-    }
   }
 }
