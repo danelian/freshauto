@@ -27,7 +27,13 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
   // ---------------------- SWIPER ------------------------
-  var swiper = new Swiper(".acardSwiper", {
+  var acardSwiper = new Swiper(".acardSwiper", {
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+  var whoareweSwiper = new Swiper(".whoareweSwiper", {
     spaceBetween: 10,
     pagination: {
       el: ".swiper-pagination",
