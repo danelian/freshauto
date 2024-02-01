@@ -438,6 +438,36 @@ th {
   cursor: auto;
 }
 
+.button-blur {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 44px;
+  min-height: 64px;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 600;
+  text-align: center;
+  color: var(--white-color);
+  outline: none;
+  border-radius: 120px;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  --webkit-backdrop-filter: blur(5px);
+  transition: 0.3s ease;
+}
+.button-blur:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (max-width: 576px) {
+  .button-blur {
+    padding: 16px 36px;
+    min-height: 50px;
+    font-size: 14px;
+  }
+}
 /*-----title----*/
 .section-title {
   margin-top: 0;
@@ -2715,6 +2745,25 @@ input[type=number]::-webkit-inner-spin-button {
   width: 100%;
   height: 100vh;
 }
+.error-section .subtitle {
+  margin-bottom: 12px;
+  font-size: 150px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+.error-section .title {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.44;
+  color: var(--white-color);
+}
+.error-section .button-blur {
+  margin-top: 28px;
+}
 
 .error404 {
   padding-top: 0;
@@ -2744,4 +2793,16 @@ input[type=number]::-webkit-inner-spin-button {
   height: 440px;
   background: linear-gradient(180deg, rgba(40, 40, 38, 0) 0%, rgba(40, 40, 38, 0.64) 100%);
   z-index: -1;
+}
+
+@media screen and (max-width: 576px) {
+  .error-section .subtitle {
+    font-size: 64px;
+  }
+  .error-section .title {
+    font-size: 18px;
+  }
+  .error-section .button-blur {
+    margin-top: 20px;
+  }
 }
