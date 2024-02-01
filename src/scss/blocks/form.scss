@@ -31,52 +31,32 @@
 				}
 			}
 		}
-		// a {
-		// 	font-size: 15px;
-		// 	text-decoration: underline;
-		// 	&:hover {
-		// 		text-decoration: none;
-		// 	}
-		// }
 	}
 	label {
 		display: block;
 	}
-	textarea {
-		resize: vertical;
-		max-width: 100%;
-		width: 100%;
-		min-height: 50px;
-		max-height: 500px;
-		height: 100px;
-		padding: 15px 20px;
-		font-weight: 400;
-		font-size: 17px;
-		line-height: 20px;
-		color: var(--font-color);
-		box-sizing: border-box;
-		border-radius: 10px;
-		border: 0;
-		outline: none;
-		background: #ffffff;
-		transition: .3s ease;
-		&::placeholder {
-			color: #b1b1b1;
-		}
-	}
-	.accept {
-		margin: 10px 0 !important;
-		width: 100%;
-		font-size: 15px;
-		line-height: 1.15;
-		color: #6f6f6f;
-		a {
-			text-decoration: none;
-			&:hover {
-				color: var(--global-color);
-				text-decoration: underline;
-			}
-		}
+}
+
+textarea {
+	resize: vertical;
+	max-width: 100%;
+	width: 100%;
+	min-height: 50px;
+	max-height: 500px;
+	height: 100px;
+	padding: 15px 16px !important;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	color: #11141b !important;
+	box-sizing: border-box;
+	border-radius: 5px;
+	border: 0;
+	outline: none;
+	background: #ffffff;
+	transition: .3s ease;
+	&::placeholder {
+		color: rgba(17, 20, 27, .5);
 	}
 }
 
@@ -98,66 +78,6 @@ input {
 	}
 }
 
-
-/* Checkbox */
-.checkbox {
-	display: block;
-	margin: 0 0 12px 0;
-	cursor: pointer;
-	user-select: none;
-	position: relative;
-	input[type=checkbox] {
-		position: absolute;
-		z-index: -1;
-		opacity: 0;
-		display: block;
-		width: 0;
-		height: 0;
-	}
-	span {
-		display: inline-block;
-		position: relative;
-		padding: 0 0 0 30px;
-		font-weight: 400;
-		font-size: 15px;
-		line-height: 18px;
-		color: var(--font-color);
-		a {
-			font-weight: 400;
-			font-size: 15px;
-			line-height: 18px;
-			color: var(--font-color);
-		}
-	}
-	span:before {
-		content: "";
-		display: inline-block;
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 15px;
-		height: 15px;
-		border-radius: 2px;
-		background-color: var(--grey-color);
-	}
-	input[type=checkbox]:checked+span:before {
-		background-color: var(--grey-color);
-	}
-	/* Checked */
-	input[type=checkbox]:checked+span:after {
-		content: "\e903";
-		position: absolute;
-		left: 1px;
-		top: 0px;
-		width: 17px;
-		height: 17px;
-		font-family: 'icomoon';
-		font-size: 17px;
-		color: var(--gold-color);
-	}
-}
-
-
 input[type="number"] {
 	-moz-appearance: textfield;
 	-webkit-appearance: textfield;
@@ -167,7 +87,6 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
 	display: none;
 }
-
 
 .select2 {
 	font-family: "Onest", sans-serif;
@@ -275,4 +194,3 @@ input[type="number"]::-webkit-inner-spin-button {
 		background: rgba(107, 119, 122, 1);
 	}
 }
-

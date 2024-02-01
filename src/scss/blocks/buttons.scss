@@ -56,6 +56,35 @@
 	}
 }
 
+.button-primary {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 16px 44px;
+	min-height: 50px;
+	font-size: 12px;
+	line-height: 1;
+	font-weight: 500;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--white-color);
+	letter-spacing: 0.48px;
+	border: 2px solid var(--white-color);outline: none;
+	border-radius: 100px;
+	background-color: #474d4f;
+	box-shadow: 0px 2px 10px 0px rgba(71, 77, 79, .6);
+	transition: .3s ease;
+	&:hover {
+		color: #474d4f;
+		border-color: #474d4f;
+		background-color: var(--white-color);
+	}
+	&.disabled {
+		opacity: 0.4;
+		cursor: auto;
+	}
+}
+
 @include mobile {
 	.button-blur {
 		padding: 16px 36px;

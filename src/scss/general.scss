@@ -21,6 +21,12 @@ body {
 	justify-content: space-between;
 	min-height: 100vh;
 }
+@include mobile {
+	.page-template-page-contacts,
+	.post-type-archive-articles {
+		padding-top: 100px;
+	}
+}
 .screen-reader-text {
 	display: none;
 }
