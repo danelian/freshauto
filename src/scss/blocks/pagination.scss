@@ -5,65 +5,65 @@
 .pagination {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
-  &-info {
-    font-size: 17px;
-    color: #989898;
-    margin-right: 16px;
+}
+.nav-links {
+  display: flex;
+}
+.page-numbers {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2px;
+  margin: 0 5px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 34px;
+  text-align: center;
+  color: rgba(255, 255, 255, .5);
+  border-radius: 10px;
+  width: 34px;
+  height: 34px;
+  background-color: rgba(217, 217, 217, .3);
+  transition: all .3s ease;
+  &.disabled {
+    opacity: .5;
+    cursor: auto;
   }
-  &>.page-numbers {
-    list-style: none;
-    padding: 0;margin: 0 0 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    .page-numbers {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      margin: 0 5px;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 1.15;
-      text-align: center;
-      color: #989898;
-      transition: color 0.3s ease-in;
+  &:hover,
+  &.current {
+    color: var(--white-color) !important;
+    background-color: var(--global-color);
+  }
+  &.prev,
+  &.next {
+    line-height: 26px;
+    border: 1px solid #D9D9D9;
+    background-color: transparent;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05);
+    &.disabled {
+      opacity: .5;
+      cursor: auto;
       &:hover {
-        color: var(--global-color);
-      }
-      &.current {
-        color: var(--font-color) !important;
+        border: 1px solid #D9D9D9 !important;
+        background-color: transparent !important;
       }
     }
+    &:hover {
+      border-color: var(--global-color);
+      background-color: var(--global-color);
+    }
+  }
+  &.prev {
+    margin-left: 0;
+  }
+  &.next {
+    margin-right: 0;
+  }
+  &.dots {
+    color: rgba(255, 255, 255, .5) !important;
+    background-color: rgba(217, 217, 217, .3) !important;
   }
 }
 
-@include tablet {
-  /*-----pagination-----*/
-  .pagination {
-    &-info {
-      font-size: 14px;
-    }
-  }
-}
-
-@include mobile {
-  /*-----pagination-----*/
-  .pagination {
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    &-info {
-      margin-right: 0;
-      margin-bottom: 10px;
-    }
-    &>.page-numbers {
-      margin: 0;
-      .page-numbers {
-        font-size: 12px;
-      }
-    }
-  }
-}

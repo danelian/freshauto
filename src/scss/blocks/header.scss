@@ -151,6 +151,7 @@
 }
 
 .page-template-front-page {
+  padding-top: 0;
   .header {
     color: #252525;
     .logo {
@@ -198,6 +199,11 @@
   .header {
     top: 0;
     color: var(--white-color);
+  }
+}
+.post-type-archive-articles {
+  .header {
+    top: 0;
   }
 }
 
