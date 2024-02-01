@@ -201,7 +201,9 @@
     color: var(--white-color);
   }
 }
-.post-type-archive-articles {
+.post-type-archive-articles,
+.single-articles,
+.error404 {
   .header {
     top: 0;
   }
