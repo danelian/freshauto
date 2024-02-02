@@ -40,20 +40,41 @@ document.addEventListener('DOMContentLoaded', function(){
     },
   });
 
+  var swiper = new Swiper(".productSecondSwiper", {
+    spaceBetween: 10,
+    slidesPerView: 5,
+    freeMode: true,
+    watchSlidesProgress: true,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar",
+    },
+  });
+  var swiper2 = new Swiper(".productMainSwiper", {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+  });
 
-    // ------------- SPECIES DETAILED FORM --------------
-    const speciesDetailed = document.querySelector('.catalog__left'),
-          speciesDetailedHeader = document.querySelector('.catalog__left-head'),
-          speciesDetailedForm = document.querySelector('.catalog__left-content');
-    speciesDetailedHeader.addEventListener('click', () => {
-    if (speciesDetailed.classList.contains('open')) {
-      speciesDetailed.classList.remove('open');
-      speciesDetailedForm.removeAttribute('style');
-    } else {
-      speciesDetailed.classList.add('open');
-      speciesDetailedForm.style.height = speciesDetailedForm.scrollHeight + 'px';
-    }
-    })
+
+  // --------------- CATALOG FILTERS FORM ----------------
+  const catalogLeft = document.querySelector('.catalog__left'),
+        catalogLeftHead = document.querySelector('.catalog__left-head'),
+        catalogLeftForm = document.querySelector('.catalog__left-content');
+  catalogLeftHead.addEventListener('click', () => {
+  if (catalogLeft.classList.contains('open')) {
+    catalogLeft.classList.remove('open');
+    catalogLeftForm.removeAttribute('style');
+  } else {
+    catalogLeft.classList.add('open');
+    catalogLeftForm.style.height = catalogLeftForm.scrollHeight + 'px';
+  }
+  })
 
 
   // ---------------------- SELECT2 ------------------------
