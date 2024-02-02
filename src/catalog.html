@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Каталог</title>
+
+	@@include('template/meta.html')
+</head>
+
+<body>
+
+  @@include('widgets/marquee.html')
+	@@include('template/header.html')
+
+	<main>
+
+    <div class="catalog">
+      <div class="container">
+        <div class="heading">
+          <h1 class="page-title">Каталог</h1>
+        </div>
+        <div class="catalog__container">
+          <div class="catalog__left">
+            <div class="catalog__left-head">
+              <h2 class="section-title">Фильтр</h2>
+            </div>
+            <div class="catalog__left-content">
+              <form action="#">
+                <div class="form-group">
+                  <select id="select-marka" class="js-select2">
+                    <option></option>
+                    <option value="marka1">Марка 1</option>
+                    <option value="marka2">Марка 2</option>
+                    <option value="marka3">Марка 3</option>
+                    <option value="marka4">Марка 4</option>
+                    <option value="marka5">Марка 5</option>
+                    <option value="marka6">Марка 6</option>
+                    <option value="marka7">Марка 7</option>
+                    <option value="marka8">Марка 8</option>
+                    <option value="marka9">Марка 9</option>
+                    <option value="marka10">Марка 10</option>
+                    <option value="marka11">Марка 11</option>
+                    <option value="marka12">Марка 12</option>
+                    <option value="marka13">Марка 13</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <select id="select-model" class="js-select2">
+                    <option></option>
+                    <option value="model1">Модель 1</option>
+                    <option value="model2">Модель 2</option>
+                    <option value="model3">Модель 3</option>
+                    <option value="model4">Модель 4</option>
+                    <option value="model5">Модель 5</option>
+                  </select>
+                </div>
+                <div class="form-group form-group--split">
+                  <input type="number" name="km_age-from" id="km_age-from" placeholder="Пробег от, км">
+                  <input type="number" name="km_age-to" id="km_age-to" placeholder="до">
+                </div>
+                <div class="form-group form-group--split">
+                  <input type="number" name="price-from" id="price-from" placeholder="Цена от, ₽">
+                  <input type="number" name="price-to" id="price-to" placeholder="до">
+                </div>
+                <div class="form-group form-group--split">
+                  <input type="number" name="year-from" id="year-from" placeholder="Год от">
+                  <input type="number" name="year-to" id="year-to" placeholder="до">
+                </div>
+                <button class="button-reset">Сбросить</button>
+              </form>
+            </div>
+          </div>
+          <div class="catalog__right">
+            <div class="catalog__right-head">
+              <h2 class="section-title">Все модели</h2>
+              <select id="select-orderby" class="js-select2">
+                <option></option>
+                <option value="orderby1">Сначала недорогие</option>
+                <option value="orderby2">Сначала дорогие</option>
+                <option value="orderby3">Сначала новые</option>
+                <option value="orderby4">Сначала старые</option>
+                <option value="orderby5">Маленький пробег</option>
+              </select>
+            </div>
+            <div class="catalog__cards">
+              @@include('template/acard.html')
+              @@include('template/acard.html')
+              @@include('template/acard.html')
+              @@include('template/acard.html')
+              @@include('template/acard.html')
+              @@include('template/acard.html')
+              @@include('template/acard.html')
+              @@include('template/acard.html')
+              @@include('template/acard.html')
+              @@include('template/acard.html')
+              @@include('template/acard.html')
+              @@include('template/acard.html')
+            </div>
+            <div class="pagination__wrapper">
+              <button class="button-second">Показать ещё</button>
+              @@include('parts/pagination.html')
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    @@include('widgets/seo-section.html')
+
+	</main>
+
+	@@include('template/footer.html')
+
+	@@include('template/scripts.html')
+
+</body>
+
+</html>

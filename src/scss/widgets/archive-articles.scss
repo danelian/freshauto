@@ -13,17 +13,6 @@
     gap: 28px 20px;
     width: 100%;
   }
-  &__bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-top: 48px;
-    .button-second {
-      margin-bottom: 24px;
-    }
-  }
 }
 
 .scard {
@@ -91,9 +80,6 @@
     &__cards {
       grid-template-columns: repeat(2, 1fr);
       gap: 20px 16px;
-    }
-    &__bottom {
-      margin-top: 40px;
     }
   }
   .scard {

@@ -41,6 +41,22 @@ document.addEventListener('DOMContentLoaded', function(){
   });
 
 
+    // ------------- SPECIES DETAILED FORM --------------
+    const speciesDetailed = document.querySelector('.catalog__left'),
+          speciesDetailedHeader = document.querySelector('.catalog__left-head'),
+          speciesDetailedForm = document.querySelector('.catalog__left-content');
+    speciesDetailedHeader.addEventListener('click', () => {
+    if (speciesDetailed.classList.contains('open')) {
+      speciesDetailed.classList.remove('open');
+      speciesDetailedForm.removeAttribute('style');
+    } else {
+      speciesDetailed.classList.add('open');
+      speciesDetailedForm.style.height = speciesDetailedForm.scrollHeight + 'px';
+    }
+    })
+
+
+  // ---------------------- SELECT2 ------------------------
   $(".js-select2").select2({
     dropdownPosition: 'below',
     closeOnSelect: true,
@@ -58,6 +74,10 @@ document.addEventListener('DOMContentLoaded', function(){
   });
   $('.js-select2').one('select2:open', function(e) {
     $('input.select2-search__field').prop('placeholder', "Поиск");
+  });
+  $("#select-orderby").select2({
+    placeholder: "Выберите очередность",
+    minimumResultsForSearch: -1
   });
 
 })

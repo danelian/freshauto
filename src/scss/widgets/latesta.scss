@@ -165,24 +165,24 @@
   }
   .acard {
     &__title {
-      font-size: 18px;
+      font-size: 18px !important;
     }
     &__price {
       .old {
-        font-size: 14px;
+        font-size: 14px !important;
       }
       .new {
-        font-size: 16px;
+        font-size: 16px !important;
       }
     }
     &__chars {
       p {
-        width: fit-content;
-        font-size: 14px;
-        margin-right: 20px;
+        width: fit-content !important;
+        font-size: 14px !important;
+        margin-right: 20px !important;
         &:nth-child(2n) {
-          margin-right: 20px;
-          width: fit-content;
+          margin-right: 20px !important;
+          width: fit-content !important;
         }
       }
     }
@@ -202,20 +202,20 @@
     }
   }
   .acard {
-    padding: 12px 12px 16px 12px;
+    padding: 12px 12px 16px 12px !important;
     &Swiper {
-      margin-bottom: 14px;
+      margin-bottom: 14px !important;
       .swiper-pagination {
-        left: 12px;bottom: 12px;
-        width: calc(100% - 24px);
+        left: 12px !important;bottom: 12px !important;
+        width: calc(100% - 24px) !important;
       }
       .swiper-pagination-bullet {
-        height: 3px;
-        margin: 0 2.5px;
+        height: 3px !important;
+        margin: 0 2.5px !important;
       }
     }
     &__title {
-      margin-bottom: 6px;
+      margin-bottom: 6px !important;
     }
   }
 }
