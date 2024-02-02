@@ -1,6 +1,5 @@
 .catalog {
   padding-top: 24px;
-  padding-bottom: 70px;
   .heading {
     margin-bottom: 44px;
   }
@@ -99,10 +98,17 @@
     }
   }
 }
+.archive {
+  .seo-section {
+    padding-top: 70px;
+  }
+}
+.sticky .catalog__left-head {
+  padding-top: 20px;
+}
 
 @media screen and (max-width: 1366px) {
   .catalog {
-    padding-bottom: 60px;
     &__left,
     &__right {
       .section-title {
@@ -148,12 +154,16 @@
       }
     }
   }
+  .archive {
+    .seo-section {
+      padding-top: 60px;
+    }
+  }
 }
 
 @include tablet {
   .catalog {
     padding-top: 12px;
-    padding-bottom: 52px;
     .heading {
       margin-bottom: 32px;
     }
@@ -240,6 +250,11 @@
           margin-right: 0;
         }
       }
+    }
+  }
+  .archive {
+    .seo-section {
+      padding-top: 52px;
     }
   }
 }
