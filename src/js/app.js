@@ -52,6 +52,9 @@ document.addEventListener('DOMContentLoaded', function(){
   });
   var swiper2 = new Swiper(".productMainSwiper", {
     spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
