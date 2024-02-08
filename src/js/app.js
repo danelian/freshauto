@@ -1,5 +1,12 @@
 document.addEventListener('DOMContentLoaded', function(){
 
+  // ---------------------- HEADER -----------------------
+  const scrollHeader = () => {
+    const header = document.getElementById('header')
+    window.scrollY >= 300 ? header.classList.add('active') : header.classList.remove('active')
+  }
+  window.addEventListener('scroll', scrollHeader)
+
   // ------------------- BURGER MENU ---------------------
   const body = document.querySelector('body'),
         burgerMenu = document.querySelector('#burger-menu'),
@@ -66,18 +73,20 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
   // --------------- CATALOG FILTERS FORM ----------------
-  const catalogLeft = document.querySelector('.catalog__left'),
-        catalogLeftHead = document.querySelector('.catalog__left-head'),
-        catalogLeftForm = document.querySelector('.catalog__left-content');
-  catalogLeftHead.addEventListener('click', () => {
-  if (catalogLeft.classList.contains('open')) {
-    catalogLeft.classList.remove('open');
-    catalogLeftForm.removeAttribute('style');
-  } else {
-    catalogLeft.classList.add('open');
-    catalogLeftForm.style.height = catalogLeftForm.scrollHeight + 'px';
-  }
-  })
+    const catalogLeft = document.querySelector('.catalog__left'),
+          catalogLeftHead = document.querySelector('.catalog__left-head'),
+          catalogLeftForm = document.querySelector('.catalog__left-content');
+    if (catalogLeft) {
+      catalogLeftHead.addEventListener('click', () => {
+      if (catalogLeft.classList.contains('open')) {
+        catalogLeft.classList.remove('open');
+        catalogLeftForm.removeAttribute('style');
+      } else {
+        catalogLeft.classList.add('open');
+        catalogLeftForm.style.height = catalogLeftForm.scrollHeight + 'px';
+      }
+      })
+    }
 
 
   // ---------------------- SELECT2 ------------------------

@@ -20,12 +20,14 @@
 	font-weight: 400;
 	text-align: center;
 	color: var(--white-color);
-	border: 0;outline: none;
+	border: 2px solid var(--global-color);
+	outline: none;
 	border-radius: 5px;
 	background-color: var(--global-color);
 	transition: .3s ease;
 	&:hover {
-		opacity: 0.9;
+		color: var(--global-color);
+		background-color: var(--white-color);
 	}
 	&.disabled {
 		opacity: 0.4;
@@ -52,7 +54,9 @@
 	--webkit-backdrop-filter: blur(5px);
 	transition: .3s ease;
 	&:hover {
-		background-color: rgba(255, 255, 255, 0.1);
+		color: var(--global-color);
+		background-color: var(--white-color);
+		border-color: var(--white-color);
 	}
 }
 
@@ -105,7 +109,8 @@
 	background-color: transparent;
 	transition: .3s ease;
 	&:hover {
-		border-color: var(--white-color);
+		border-color: var(--global-color);
+		background-color: var(--global-color);
 	}
 }
 

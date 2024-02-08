@@ -1,12 +1,17 @@
 /*----header-----*/
 .header {
-  position: absolute;
-  top: 38px;
+  position: relative;
+  top: 0;
   left: 0;
   right: 0;
-  padding: 18px 0 20px 0;
   width: 100%;
+  background-color: transparent;
   z-index: 500;
+  &.active {
+    position: fixed;
+    top: 0;
+    background-color: #2c312b;
+  }
   .logo {
     flex-shrink: 0;
     width: 78px;
@@ -19,10 +24,11 @@
     justify-content: space-between;
     position: relative;
     width: 100%;
+    padding: 18px 0 20px 0;
     &::after {
       content: '';
       position: absolute;
-      left: 0;bottom: -20px;
+      left: 0;bottom: 0;
       width: 100%;
       height: 1px;
       background: rgba(255, 255, 255, .2);
@@ -53,31 +59,31 @@
       }
       >a {
         display: inline-block;
-        position: relative;
+        // position: relative;
         font-weight: 700;
         font-size: 16px;
         line-height: 1.4;
         color: var(--white-color);
         text-align: center;
         transition: color .3s ease;
-        &::after {
-          content: '';
-          position: absolute;
-          top: 50%;left: 50%;
-          transform: translate(-50%,-50%);
-          width: calc(100% + 36px);
-          height: calc(100% + 20px);
-          border-radius: 100px;
-          background: var(--global-color);
-          opacity: 0;
-          z-index: -1;
-          transition: opacity .3s ease;
-        }
+        // &::after {
+        //   content: '';
+        //   position: absolute;
+        //   top: 50%;left: 50%;
+        //   transform: translate(-50%,-50%);
+        //   width: calc(100% + 36px);
+        //   height: calc(100% + 20px);
+        //   border-radius: 100px;
+        //   background: var(--global-color);
+        //   opacity: 0;
+        //   z-index: -1;
+        //   transition: opacity .3s ease;
+        // }
         &:hover {
-          color: var(--white-color);
-          &::after {
-            opacity: 1;
-          }
+          color: var(--global-color);
+          // &::after {
+          //   opacity: 1;
+          // }
         }
       }
     }
@@ -150,9 +156,9 @@
   }
 }
 
-.page-template-front-page {
-  padding-top: 0;
+.home {
   .header {
+    position: absolute;
     color: #252525;
     .logo {
       color: #252525;
@@ -165,7 +171,7 @@
         >a {
           color: #252525;
           &:hover {
-            color: var(--white-color);
+            color: var(--global-color);
           }
         }
       }
@@ -193,22 +199,65 @@
       color: var(--global-color);
     }
   }
+  .header.active {
+    .container .header__container>.logo {
+      color: var(--white-color);
+    }
+    .header__container {
+      &::after {background: none;}
+    }
+    .header__menu {
+      >li {
+        >a {
+          color: var(--white-color);
+          &:hover {
+            color: var(--global-color);
+          }
+        }
+      }
+    }
+    .header__bar {
+      .phone {
+        color: var(--white-color);
+        border: 1px solid rgba(255, 255, 255, .2);
+        &:hover {
+          border: 1px solid rgba(255, 255, 255, .8);
+        }
+      }
+    }
+    .langs {
+      border: 1px solid rgba(255, 255, 255, .2);
+      li a {
+        color: var(--white-color);
+      }
+    }
+    #burger-open {
+      color: var(--white-color);
+      border: 1px solid rgba(255, 255, 255, .2);
+      &:hover {
+        color: rgba(255, 255, 255, .8);
+      }
+    }
+  }
 }
 .page-template-page-about-us {
-  padding-top: 100px;
   .header {
-    top: 0;
     color: var(--white-color);
   }
 }
-.post-type-archive-articles,
-.single-articles,
-.page-template-page-contacts,
 .error404 {
   .header {
-    top: 0;
+    position: absolute;
   }
 }
+// .post-type-archive-articles,
+// .single-articles,
+// .page-template-page-contacts,
+// .error404 {
+//   .header {
+//     top: 0;
+//   }
+// }
 
 #burger-open {
   display: none;
@@ -267,13 +316,12 @@
     display: flex;
   }
   .header {
-    top: 38px;
-    padding: 16px 0;
     .logo {
       width: 62px;
       margin-right: 12px;
     }
     &__container {
+      padding: 16px 0;
       &::after {
         display: none;
       }
